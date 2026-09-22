@@ -1,0 +1,398 @@
+/* ================================
+   NHÀ MỘC COFFEE - CSS3
+   BÀI 1 - CHƯƠNG 7
+   ================================ */
+
+* {
+    /* Universal selector (*) */
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f7f3ec;
+    color: #3d3028;
+    line-height: 1.6;
+}
+
+/* =================================
+   HEADER - Background
+   ================================= */
+
+.site-header {
+    min-height: 330px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+
+    /* background-size + background-position */
+    background-image:
+        linear-gradient(rgba(38, 25, 18, .58), rgba(38, 25, 18, .58)),
+        url("../images/header.svg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.header-overlay {
+    text-align: center;
+    padding: 30px;
+}
+
+.logo {
+    /* Tag selector */
+    width: 105px;
+    height: 105px;
+    border-radius: 50%;
+    border: 4px solid white;
+    margin-bottom: 10px;
+}
+
+.brand h1 {
+    /* Descendant selector */
+    font-size: 48px;
+    letter-spacing: 2px;
+}
+
+.brand p {
+    font-size: 20px;
+    font-style: italic;
+}
+
+/* =================================
+   NAVIGATION
+   ================================= */
+
+.main-nav {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background: #3d3028;
+    box-shadow: 0 3px 10px rgba(0,0,0,.15);
+}
+
+.main-nav > ul {
+    /* Child selector (>) */
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.main-nav li {
+    margin: 0;
+}
+
+.main-nav a {
+    /* Tag selector */
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 15px 24px;
+    transition: .25s;
+}
+
+.main-nav a:hover {
+    /* Pseudo-class selector (:hover) */
+    background: #a66a3f;
+    transform: translateY(-2px);
+}
+
+/* =================================
+   LAYOUT
+   ================================= */
+
+.page-container {
+    width: min(1200px, 94%);
+    margin: 35px auto;
+    display: grid;
+    grid-template-columns: 1fr 310px;
+    gap: 28px;
+}
+
+.menu-section {
+    margin-bottom: 45px;
+}
+
+/* =================================
+   SECTION TITLE
+   ================================= */
+
+.menu-section h2 {
+    /* Class + descendant selector */
+    position: relative;
+    display: inline-block;
+    margin-bottom: 22px;
+    padding: 9px 22px;
+
+    /* background-origin + background-clip */
+    background-color: #e9d6bd;
+    background-origin: border-box;
+    background-clip: padding-box;
+
+    border-radius: 12px;
+}
+
+.menu-section h2::after {
+    /* Pseudo-element selector (::after) */
+    content: "";
+    position: absolute;
+    width: 55%;
+    height: 3px;
+    left: 22%;
+    bottom: -8px;
+    background: #a66a3f;
+    border-radius: 10px;
+}
+
+.food-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 22px;
+}
+
+/* =================================
+   FOOD CARD
+   ================================= */
+
+.food-card {
+    background: white;
+    border-radius: 18px;
+    overflow: hidden;
+
+    /* box-shadow */
+    box-shadow: 0 8px 22px rgba(66, 44, 30, .13);
+
+    transition: transform .25s, box-shadow .25s;
+}
+
+.food-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 14px 28px rgba(66, 44, 30, .2);
+}
+
+.food-card img {
+    /* Tag selector */
+    width: 100%;
+    height: 205px;
+    object-fit: cover;
+    border-radius: 18px 18px 0 0;
+}
+
+.card-body {
+    padding: 18px;
+}
+
+.card-body h3 {
+    font-size: 21px;
+    margin-bottom: 7px;
+}
+
+.card-body p {
+    min-height: 50px;
+    color: #6d625a;
+}
+
+.price {
+    /* Class selector */
+    display: inline-block;
+    color: #a04e27;
+    font-weight: bold;
+    font-size: 20px;
+    margin: 10px 0;
+}
+
+.card-body button {
+    /* Descendant selector */
+    display: block;
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+    padding: 11px;
+    background: #a66a3f;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: .2s;
+}
+
+.card-body button:hover {
+    transform: scale(1.03);
+    background: #7f4e2f;
+}
+
+/* =================================
+   FEATURED CARD
+   ================================= */
+
+.food-card.featured {
+    border: 3px solid #d7ae82;
+}
+
+/* =================================
+   ASIDE
+   ================================= */
+
+.sidebar h2 {
+    margin-bottom: 14px;
+}
+
+.promo {
+    /* ID selector */
+    padding: 24px;
+    margin-bottom: 25px;
+    background: #fff8ee;
+    border: 10px solid transparent;
+
+    /* border-image */
+    border-image: url("../images/border-pattern.svg") 30 round;
+
+    box-shadow: 0 7px 20px rgba(66,44,30,.1);
+}
+
+.promo-title {
+    font-size: 21px;
+    font-weight: bold;
+    color: #a04e27;
+    margin-bottom: 8px;
+}
+
+.promo strong {
+    display: block;
+    margin: 12px 0;
+}
+
+.promo-button {
+    display: inline-block;
+    padding: 9px 15px;
+    background: #3d3028;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+}
+
+.favorite {
+    background: white;
+    padding: 22px;
+    border-radius: 15px;
+    box-shadow: 0 7px 20px rgba(66,44,30,.1);
+}
+
+.favorite li {
+    margin: 10px 0 10px 22px;
+}
+
+/* =================================
+   GROUP SELECTOR (,)
+   ================================= */
+
+.promo h2,
+.favorite h2 {
+    color: #7f4e2f;
+}
+
+/* =================================
+   ADJACENT SIBLING SELECTOR (+)
+   ================================= */
+
+.brand h1 + p {
+    margin-top: 3px;
+}
+
+/* =================================
+   FIRST-CHILD PSEUDO-CLASS
+   ================================= */
+
+.favorite li:first-child {
+    font-weight: bold;
+    color: #a04e27;
+}
+
+/* =================================
+   FOOTER
+   Multiple background images
+   ================================= */
+
+footer {
+    position: relative;
+    color: white;
+    padding: 45px 6% 25px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+
+    /* Multiple background images */
+    background-image:
+        url("../images/leaf-pattern.svg"),
+        linear-gradient(135deg, #3d3028, #604838);
+    background-repeat: repeat, no-repeat;
+    background-size: 180px, cover;
+    background-position: right top, center;
+}
+
+footer h3 {
+    margin-bottom: 8px;
+}
+
+footer a {
+    color: #f4d7b5;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+.copyright {
+    grid-column: 1 / -1;
+    text-align: center;
+    border-top: 1px solid rgba(255,255,255,.25);
+    padding-top: 18px;
+}
+
+/* =================================
+   RESPONSIVE
+   ================================= */
+
+@media (max-width: 850px) {
+    .page-container {
+        grid-template-columns: 1fr;
+    }
+
+    .sidebar {
+        order: -1;
+    }
+
+    footer {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+    .brand h1 {
+        font-size: 34px;
+    }
+
+    .food-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .main-nav > ul {
+        flex-direction: column;
+    }
+
+    .main-nav a {
+        text-align: center;
+    }
+
+    footer {
+        grid-template-columns: 1fr;
+    }
+}

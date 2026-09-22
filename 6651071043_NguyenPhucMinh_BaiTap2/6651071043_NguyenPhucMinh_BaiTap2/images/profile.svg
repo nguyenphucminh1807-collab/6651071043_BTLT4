@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 800">
+<rect width="700" height="800" rx="36" fill="#d9d3c8"/>
+<circle cx="350" cy="285" r="145" fill="#20242a"/>
+<circle cx="350" cy="250" r="105" fill="#f2c6a9"/>
+<path d="M245 245c18-105 192-126 214 2-58-31-140-36-214-2z" fill="#20242a"/>
+<circle cx="315" cy="255" r="10" fill="#20242a"/><circle cx="385" cy="255" r="10" fill="#20242a"/>
+<path d="M320 310q30 24 60 0" fill="none" stroke="#20242a" stroke-width="9" stroke-linecap="round"/>
+<path d="M165 710q15-230 185-230t185 230" fill="#20242a"/>
+<text x="350" y="755" text-anchor="middle" font-family="Arial" font-size="28" font-weight="700" fill="#fff">MINH PHÚC</text>
+</svg>

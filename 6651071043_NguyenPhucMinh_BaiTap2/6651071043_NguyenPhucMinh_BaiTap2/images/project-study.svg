@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
+<rect width="800" height="500" fill="#f3eee5"/><path d="M110 390L250 120l120 210 120-170 180 230" fill="none" stroke="#20242a" stroke-width="34" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="250" cy="120" r="34" fill="#c46a3b"/><circle cx="490" cy="160" r="34" fill="#c46a3b"/>
+<text x="400" y="465" text-anchor="middle" font-family="Arial" font-size="34" font-weight="700" fill="#20242a">CSS3 PRACTICE</text>
+</svg>
